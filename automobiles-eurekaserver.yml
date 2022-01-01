@@ -1,5 +1,21 @@
+---
+spring:
+  config:
+    activate:
+      on-profile:
+      - master
 eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
-    
+...
+---
+spring:
+  config:
+    activate:
+      on-profile:
+      - replica
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
